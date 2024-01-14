@@ -1,0 +1,8 @@
+<!-- templates/index.html -->
+{% extends "layout.html" %}
+
+{% block main %}
+    <h2>Portfolio</h2>
+    <p>Total Money: {{ total_money | usd }}</p>
+    <!-- Add your chart here or any other content you want on the index page -->
+{% endblock %}

@@ -1,0 +1,43 @@
+<!-- templates/add_transaction.html -->
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Transaction
+{% endblock %}
+
+{% block main %}
+    <h2>Add Transaction</h2>
+    
+    <form action="/add_transaction" method="post">
+        <div class="mb-3">
+            <label for="transaction_name" class="form-label">Transaction Name</label>
+            <input type="text" class="form-control" id="transaction_name" name="transaction_name" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="transaction_type" class="form-label">Transaction Type</label>
+            <select class="form-select" id="transaction_type" name="transaction_type" required>
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+        </div>
+        
+        <div class="mb-3">
+            <label for="recurrence_frequency" class="form-label">Recurrence Frequency (days)</label>
+            <input type="number" class="form-control" id="recurrence_frequency" name="recurrence_frequency" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="num_occurrences" class="form-label">Number of Occurrences</label>
+            <input type="number" class="form-control" id="num_occurrences" name="num_occurrences" required>
+        </div>
+        
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="indefinite" name="indefinite">
+            <label class="form-check-label" for="indefinite">Indefinite</label>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Add Transaction</button>
+    </form>
+    
+{% endblock %}

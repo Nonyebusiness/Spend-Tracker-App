@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Manage Money
+{% endblock %}
+
+{% block main %}
+    <form action="/buy" method="post">
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="deposite_money" name="deposit_money" placeholder="Money Amount" type="text" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Deposit</button>
+    </form>
+{% endblock %}
